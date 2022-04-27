@@ -1,7 +1,7 @@
 // import functions and grab DOM elements
-const headDropdown = document.getElementById('head-dropdown');
-const middleDropdown = document.getElementById('middle-dropdown');
-const bottomDropdown = document.getElementById('bottom-dropdown');
+const headDropdown = document.getElementById('headdropdown');
+const middleDropdown = document.getElementById('middledropdown');
+const bottomDropdown = document.getElementById('bottomdropdown');
 const headEl = document.getElementById('head');
 const middleEl = document.getElementById('middle');
 const bottomEl = document.getElementById('bottom');
@@ -17,7 +17,8 @@ let bottomCount = 0;
 // set state for all of the character's catchphrases
 
 headDropdown.addEventListener('change', () => {
-    headEl.style.backgroundImage = `url('../assets/${head-dropdown.value}.png')`;
+    console.log('changing select', headdropdown.value);
+    headEl.style.backgroundImage = `url('../assets/${headdropdown.value}.png')`;
     // get the value of the head dropdown
     // increment the head change count state
     headCount++;
@@ -28,7 +29,7 @@ headDropdown.addEventListener('change', () => {
 
 
 middleDropdown.addEventListener('change', () => {
-    middleEl.style.backgroundImage = `url('../assets/${middle-dropdown.value}.png')`;
+    middleEl.style.backgroundImage = `url('../assets/${middledropdown.value}.png')`;
     // get the value of the middle dropdown
     // increment the middle change count state
     middleCount++;
@@ -39,7 +40,7 @@ middleDropdown.addEventListener('change', () => {
 
 
 bottomDropdown.addEventListener('change', () => {
-    bottomEl.style.backgroundImage = `url('../assets/${bottom-dropdown.value}.png')`;
+    bottomEl.style.backgroundImage = `url('../assets/${bottomdropdown.value}.png')`;
     // get the value of the bottom dropdown
     // increment the bottom change count state
     bottomCount++;
