@@ -53,11 +53,11 @@ bottomDropdown.addEventListener('change', () => {
 
 catchphraseButton.addEventListener('click', () => {
     // get the value of the catchphrase input
-    
+    catchphrasesEl.push(catchphrasesEl.value);
     // push the new catchphrase to the catchphrase array in state
 
     // clear out the form input's value so it's empty to the user
-   
+    catchphraseButton.textContent = '';
     // update the dom to show the new catchphrases (refactor to/call displayCatchphrases to do this work)
 
 });
@@ -77,4 +77,5 @@ function displayCatchphrases() {
     // create an HTML element with the catchphrase as its text content
     
     // and append that HTML element to the cleared-out DOM
+    catchphrasesEl.textContent = '';
 }
