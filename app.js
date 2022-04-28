@@ -15,6 +15,7 @@ let headCount = 0;
 let middleCount = 0;
 let bottomCount = 0;
 // set state for all of the character's catchphrases
+let phrase = 
 
 headDropdown.addEventListener('change', () => {
     console.log('changing select', headDropdown.value);
@@ -55,11 +56,11 @@ catchphraseButton.addEventListener('click', () => {
     // get the value of the catchphrase input
     catchphrasesEl.push(catchphrasesEl.value);
     // push the new catchphrase to the catchphrase array in state
-
+    catchphraseInput.push(catchphraseInput.value);
     // clear out the form input's value so it's empty to the user
     catchphraseButton.textContent = '';
     // update the dom to show the new catchphrases (refactor to/call displayCatchphrases to do this work)
-
+    displayCatchphrases();
 });
 
 function displayStats() {
@@ -69,13 +70,15 @@ function displayStats() {
 
 function displayCatchphrases() {
     // clear out the DOM for the currently displayed catchphrases
-
+    catchphrasesEl.textContent = '';
     // loop through each catchphrase in state
-   
+    for (let phrase of catchphraseInput) {
+        list.textContent = phrase;
+    }
     // and for each catchphrase
-    
+    const list = document.createElement(catchphraseInput);
     // create an HTML element with the catchphrase as its text content
     
     // and append that HTML element to the cleared-out DOM
-    catchphrasesEl.textContent = '';
+    catchphrasesEl.append(catchphraseInput);
 }
