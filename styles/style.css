@@ -45,6 +45,17 @@ h2 {
     font-weight: bold;
 }
 
+#face {
+    background-image: url('../assets/bird-head.png');
+}
+
+#body {
+    background-image: url('../assets/blue-middle.png');
+}
+
+#pants {
+    background-image: url('../assets/leg-pants.png');
+}
 .gutter-right {
     margin-right: 20px;
 }
